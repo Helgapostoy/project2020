@@ -1,15 +1,21 @@
 "use strict"
 
-//const result = confirm('are you here?');
-//console.log(result);
+const numberOfFilms = +prompt('Сколько фильмов Вы уже посмотрели?', '');
 
-//const answer = +prompt('Вам есть 18 лет?', '');
-//console.log(typeof(answer));
+const perconalMovieDB = {
+count: numberOfFilms,
+movies: {},
+actors: {},
+genres: [],
+privat: false
+};
 
-const answers = [];
+const a = prompt ('Один из последних просмотренных фильмов?', ''),
+      b = prompt ('На сколько оцените его?', ''),
+      с = prompt ('Один из последних просмотренных фильмов?', ''),
+      d = prompt ('На сколько оцените его?', '');
 
-answers[0] = prompt('Как ваше имя?', '');
-answers[1] = prompt('Как ваша фамилия?', '');
-answers[2] = prompt('Сколько вам лет?', '');
+perconalMovieDB.movies[a] = b;
+perconalMovieDB.movies[с] = d;
 
-document.write(answers);
+console.log(perconalMovieDB); 
